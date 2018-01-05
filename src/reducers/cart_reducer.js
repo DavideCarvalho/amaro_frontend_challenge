@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { ContainerTypes } from '../actions/cart';
+import { CartTypes } from '../actions/cart';
 import { createReducer } from 'reduxsauce';
 
 const INITIAL_STATE = {
@@ -22,8 +22,8 @@ const deleteProductFromCart = (state = INITIAL_STATE, action) => {
 }
 
 const HANDLERS = {
-  [ContainerTypes.ADD_PRODUCT_TO_CART]: addProductToCart,
-  [ContainerTypes.DELETE_PRODUCT_FROM_CART]: deleteProductFromCart
+  [CartTypes.ADD_PRODUCT_TO_CART]: addProductToCart,
+  [CartTypes.DELETE_PRODUCT_FROM_CART]: deleteProductFromCart
 }
 
 export default createReducer(INITIAL_STATE, HANDLERS);

@@ -21,5 +21,5 @@ const { Types, Creators } = createActions({
   deleteProductFromCart
 })
 
-export const ContainerTypes = Types;
+export const CartTypes = Types;
 export default Creators;
