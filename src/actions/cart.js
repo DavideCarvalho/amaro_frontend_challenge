@@ -1,7 +1,7 @@
 import { createActions } from 'reduxsauce';
 
 export const ADD_PRODUCT_TO_CART = 'ADD_PRODUCT_TO_CART';
-export const addProductToCart = (dispatch) => {
+export const addProductToCart = () => (dispatch) => {
   dispatch({
     type: ADD_PRODUCT_TO_CART,
     payload: null
@@ -9,7 +9,7 @@ export const addProductToCart = (dispatch) => {
 }
 
 export const DELETE_PRODUCT_FROM_CART = 'DELETE_PRODUCT_FROM_CART';
-export const deleteProductFromCart = () => {
+export const deleteProductFromCart = () => (dispatch) => {
   dispatch({
     type: DELETE_PRODUCT_FROM_CART,
     payload: null

@@ -1,4 +1,4 @@
-import { ProductTypes } from '../actions/products';
+import { ProductTypes } from '../actions/product';
 import { createReducer } from 'reduxsauce';
 
 const INITIAL_STATE = {
@@ -11,8 +11,8 @@ const getProducts = (state = INITIAL_STATE, action) => {
   ]}
 }
 
-const HANDLERS = [
-  [ProductTypes.GET_PRODUCTS] = getProducts
-]
+const HANDLERS = {
+  [ProductTypes.GET_PRODUCTS]: getProducts
+}
 
 export default createReducer(INITIAL_STATE, HANDLERS);
