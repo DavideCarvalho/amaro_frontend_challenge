@@ -1,5 +1,5 @@
 import carrinhoReducer from '../reducers/cart_reducer'
-import products from '../../products.json';
+import products from '../products.json';
 
 let cartWithOneProduct = null;
 let cartWithTwoProducts = null;

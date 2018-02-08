@@ -1,7 +1,8 @@
+// @flow
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ProductList from './components/products_list/product_list';
+import { ProductListContainer as ProductList } from './container/products_list';
 
 class App extends Component {
   render() {
@@ -14,7 +15,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <ProductList></ProductList>
+        <ProductList />
       </div>
     );
   }
