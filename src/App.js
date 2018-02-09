@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import { ProductListContainer as ProductList } from './container/products_list';
 
-class App extends Component {
+class App extends Component<{}> {
   render() {
     return (
       <div className="App">

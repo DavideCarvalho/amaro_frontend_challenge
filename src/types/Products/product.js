@@ -1,7 +1,7 @@
 // @flow
 import type { Size } from './size';
 
-export type Product = {
+export type ProductType = {
   +name: string,
   +style: string,
   +code_color: string,

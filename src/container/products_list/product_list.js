@@ -1,10 +1,11 @@
-import { ProductListComponent as ProductList  } from '../../components/products_list';
+import { ProductListComponent as ProductList  } from '../../components/products';
+import {  getProducts } from '../../actions/product';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
   return {
-    products: state.products
+    productsState: state.products
   }
-}
+};
 
-export default connect(mapStateToProps)(ProductList);
+export default connect(mapStateToProps, { getProducts })(ProductList);

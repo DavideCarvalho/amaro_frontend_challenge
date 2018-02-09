@@ -1,18 +1,22 @@
-import { ProductTypes } from '../actions/product';
+import { ProductActionTypes } from '../actions/product';
 import { createReducer } from 'reduxsauce';
+import dotProp from 'dot-prop-immutable';
 
 const INITIAL_STATE = {
   products: []
 }
 
 const getProducts = (state = INITIAL_STATE, action) => {
-  return {...state, products: [
-    ...state.products, state.products = action.payload
-  ]}
+  let newState = dotProp.set(state, `products`, action.payload)
+  newState.products = newState.products.products;
+  return newState;
+  // return {...state, products: [
+  //   ...state.products, state.products = products
+  // ]}
 }
 
 const HANDLERS = {
-  [ProductTypes.GET_PRODUCTS]: getProducts
+  [ProductActionTypes.GET_PRODUCTS]: getProducts
 }
 
 export default createReducer(INITIAL_STATE, HANDLERS);
